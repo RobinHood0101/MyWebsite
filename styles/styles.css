@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+/* Universal */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    text-decoration: none;
+    height: 120vw;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+#back{
+    position: absolute;
+    bottom: 50px;
+    right: 100px;
+    padding: 20px;
+    background-color: aliceblue;
+    border: 2px solid #000000;
+    border-radius: 5px;
+}
+
+/* Navigationsleiste */
+nav{
+    /* border: 1px solid black; */
+    padding: 20px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+
+nav .burger-icon{
+    display: none;
+}
+nav .burger-menu{
+    display: none;
+}
+
+
+nav img{
+    width: 150px;
+}
+
+nav .navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    /* border: 1px solid black; */
+    padding: 15px;
+    height: 130px;
+}
+
+nav .navbar ul{
+    display: flex;
+    gap: 20px;
+}
+
+nav .navbar ul li{
+    font-size: 1.5em;
+    position: relative;
+}
+nav .navbar ul li::after{
+    content: '';
+    background-color: #ffffff;
+    border-radius: 2px;
+    width: 0;
+    height: 3px;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    transition: ease-in-out .2s;
+}
+nav .navbar ul li:hover::after{
+    width: 100%;
+}
+
+nav .navbar ul li a {
+    color: #ffffff;
+}
+
+nav .navbar .social-media a ion-icon{
+    font-size: 1.2em;
+    color: #ffffff;
+}
+nav .navbar .select-language{
+    position: relative;
+}
+nav .navbar .select-language button{
+    width: 300px;
+    padding: 5px;
+    font-size: 1.3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 2px;
+}
+nav .navbar .select-language .dialog{
+    display: none;
+    position: absolute;
+    top: 30px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    width: 300px;
+    height: auto;
+    padding: 10px;
+    z-index: 1;
+    transition: all .3s;
+}
+.active{
+    display: block !important;
+    height: auto !important;
+}
+
+nav .navbar .select-language .dialog ul{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+header{
+    height: 100vh;
+    background-image: url("https://www.bc-olympica-brig.ch/images/bcocabcsion_6_von_97.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    filter: grayscale(50%);
+}
+
+.titel{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+}
+
+.titel h1{
+    text-align: center;
+    color: #ffffff;
+    font-size: 7em;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-shadow: 1px 1px 4px #ffffff;
+    pointer-events: none;
+    user-select: none;
+}
+
+.titel p{
+    text-align: center;
+    font-size: 3em;
+    transition: ease .2s;
+    user-select: none;
+}
+.titel p:hover{
+    transform: scale(1.2);
+}
+
+.titel p a{
+    color: #ffffff;
+    transition: ease-in-out .2s;
+}
+
+
+/* MAIN */
+
+main{
+    padding: 30px;
+    padding-bottom: 100px;
+    background-color: aliceblue;
+}
+
+main h2{
+    font-size: 5em;
+    margin-top: 20px;
+}
+main p {
+    font-size: 2.2em;
+    text-align: center;
+}
+main #aktuell{
+    opacity: 0;
+    transform: translateX(1000px);
+    transition: 1.5s;
+}
+main #trainings{
+    opacity: 0;
+    transform: translateX(-1000px);
+    transition: 1.5s;
+}
+main #interclub{
+    opacity: 0;
+    transform: translateX(1000px);
+    transition: 1.5s;
+}
+main #aktuell, #trainings, #interclub{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 200px;
+}
+main img{
+    max-width: 600px;
+    height: auto;
+    border-radius: 4px;
+}
+main .beschreibung{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+main .mainButton{
+    padding: 15px;
+    width: 200px;
+    height: auto;
+    font-size: 1.7em;
+    background-color: #ffffff;
+    border: 3px solid #000000;
+    border-radius: 5px;
+    transition: all .2s;
+}
+main .mainButton:hover{
+    transform: scale(1.05);
+}
+main .mainButton:active{
+    background-color: grey;
+}
+main a{
+    color: #000000;
+    margin: 40px;
+}
+
+
+
+
+/*Footer*/
+
+footer{
+    padding: 30px;
+    position: relative;
+    margin-top: 90px;
+}
+footer h2{
+    font-size: 2.5em;
+    text-align: center;
+    display: block;
+    border-bottom: 2px solid #000000;
+    padding: 30px;
+}
+footer h3{
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+footer ion-icon{
+    margin-right: 10px;
+}
+footer ul li{
+    font-size: 1.2em;
+    transition: .3s;
+}
+footer ul li:hover{
+    transform: scale(1.03);
+}
+footer ul li a{
+    color: #000000;
+    font-size: 1.4em;
+}
+footer .container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+footer .container div{
+    margin: 40px;
+}
+footer p{
+    text-align: center;
+    margin-top: 100px;
+}
+nav .close-burger{
+    display: none;
+}
+
+.active-menu{
+    display: block !important;
+/*     transform: translate(10%, 10%) !important;
+    transition: all .3s !important; */
+}
+
+@media screen and (max-width: 600px) {
+    nav{
+        background-color: #ffffff;
+        /* position: sticky;
+        top: 0;   */ 
+    }
+    nav img{
+        width: 120px;
+    }
+    nav .navbar{
+        display: none;
+    } 
+    nav .burger-icon{
+        display: block;
+        color: #000000;
+        font-size: 40px;
+        display: block;
+        z-index: 2;
+    }
+    nav .close-burger{
+        display: none;
+        font-size: 40px;
+        z-index: 2;
+    }
+    nav .burger-menu{
+        background-color: aliceblue;
+        border-bottom-left-radius: 10px;
+        border-top-left-radius: 10px;
+        width: 200px;
+        height: 350px;
+        position: absolute;
+        right: 0;
+        top: 50px;
+        z-index: 1;
+    }
+    nav .burger-menu ul{
+        font-size: 3em;
+        text-align: center;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    nav .burger-menu ul li{
+        padding: 6px;
+    }
+    nav .burger-menu ul li a{
+        color: #000000;
+        transition: all .1s;
+    }
+    nav .burger-menu ul li a:active{
+        color:rgb(109, 156, 196);
+    }
+    .titel h1{
+        font-size: 4em;
+    }
+    .titel p{
+        font-size: 2.4em;
+        border: 2px solid #ffffff;
+        border-radius: 5px;
+        margin: 40px;
+    }
+    main img{
+        width: 350px;
+    }
+    body{
+        font-size: 0.5em;
+    }
+    main #aktuell, #trainings, #interclub {
+        margin-top: 70px;
+        border-bottom: 3px solid black;
+    }
+    main #trainings{
+        flex-flow: column;
+    }
+    main #trainings .beschreibung{
+        order: 2;
+    }
+    main #trainings div{
+        order: 1;
+    }
+    footer .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    #back {
+        display: none;
+    }
+    footer p{
+        margin-top: 0;
+    }
+}
+
+
